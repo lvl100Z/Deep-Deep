@@ -1,0 +1,941 @@
+/* Сброс базовых стилей для кросс-браузерной совместимости */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Установка глобальных шрифтов и фонов */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Стили для шапки */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+/* Меню навигации */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #9e62b0; /* Фиолетовый оттенок при наведении */
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Hero-секция */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Секция "О группе" */
+.introduction {
+    margin-bottom: 40px;
+}
+
+.introduction h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.introduction p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Секция "Что вы найдёте" */
+.highlights h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.highlights ul {
+    list-style: none;
+}
+
+.highlights li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.highlights li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #9e62b0;
+}
+
+/* Футер */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Эффекты при наведении на ссылки в теле страницы */
+a:hover {
+    cursor: pointer;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .main-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .introduction h2, .highlights h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .introduction h2, .highlights h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Предполагается, что данные стили дополнят или будут использоваться вместо предыдущего файла styles.css */
+
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Глобальные стили */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+header, footer {
+    background: #111;
+    color: #888;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #9e62b0; /* Фирменный фиолетовый оттенок */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Стили для страницы "О группе" */
+.about-band, .band-members, .gallery, .biography {
+    margin-bottom: 40px;
+}
+
+.about-band h1,
+.band-members h2,
+.gallery h2,
+.biography h2 {
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.about-band p,
+.band-members p,
+.biography p,
+.gallery p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Таблица с участниками группы */
+.band-members table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.band-members th,
+.band-members td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.band-members thead {
+    background: #2a2a2a;
+}
+
+.band-members th {
+    font-weight: bold;
+    color: #fff;
+}
+
+.band-members tbody tr:nth-child(even) {
+    background: #222;
+}
+
+/* Галерея */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-container figure {
+    flex: 1 1 calc(20% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    border-color: #9e62b0;
+}
+
+.gallery-container figcaption {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .main-nav li {
+        margin-bottom: 10px;
+    }
+
+    .about-band h1,
+    .band-members h2,
+    .gallery h2,
+    .biography h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container figure {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .about-band h1,
+    .band-members h2,
+    .gallery h2,
+    .biography h2 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-container figure {
+        flex: 1 1 calc(100% - 20px);
+    }
+}
+
+
+/* Предполагается, что данные стили дополняют общий файл styles.css, используемый на всех страницах. 
+   Ниже приведены дополнительные стили, специфичные для страницы "История". */
+
+/* Секция с хедером для истории */
+.history-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.history-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.history-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.history-hero img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Таймлайн истории */
+.timeline {
+    margin-bottom: 40px;
+}
+
+.timeline h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Эпохи, отрезки истории */
+.era {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.era h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.era img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.era img:hover {
+    transform: scale(1.05);
+    border-color: #9e62b0;
+}
+
+.era p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .history-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .timeline h2 {
+        font-size: 1.5rem;
+    }
+
+    .era h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .timeline h2 {
+        font-size: 1.3rem;
+    }
+
+    .era h3 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Предполагается, что данные стили дополняют или используют общий файл styles.css */
+/* Ниже приведены стили, специфичные для страницы "Музыка". */
+
+/* Hero-секция для музыки */
+.music-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.music-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.music-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.music-hero img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Секция платформ для прослушивания музыки */
+.music-platforms {
+    margin-bottom: 40px;
+}
+
+.music-platforms h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.platform-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.platform {
+    background: #1e1e1e;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.platform h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.platform p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.platform a {
+    color: #9e62b0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.platform a:hover {
+    color: #b084c5;
+}
+
+/* Дискография */
+.discography {
+    margin-bottom: 40px;
+}
+
+.discography h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.discography p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.discography-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.discography-table thead {
+    background: #2a2a2a;
+}
+
+.discography-table th, .discography-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.discography-table th {
+    color: #fff;
+    font-weight: bold;
+}
+
+.discography-table tbody tr:nth-child(even) {
+    background: #222;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .music-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .music-platforms h2,
+    .discography h2 {
+        font-size: 1.5rem;
+    }
+
+    .platform {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .music-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .music-platforms h2,
+    .discography h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Предполагается, что данные стили дополняют или используют общий файл styles.css */
+/* Ниже приведены стили, специфичные для страницы "Магазин". */
+
+/* Hero-секция для магазина */
+.shop-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shop-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.shop-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.shop-hero img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Секция товаров */
+.shop-items h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shop-item {
+    background: #1e1e1e;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: scale(1.02);
+    border-color: #9e62b0;
+}
+
+.shop-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.shop-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.buy-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #9e62b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+    background: #b084c5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .shop-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .shop-items h2 {
+        font-size: 1.5rem;
+    }
+
+    .shop-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .shop-items h2 {
+        font-size: 1.3rem;
+    }
+
+    .shop-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* Предполагается, что данные стили дополняют или используют общий файл styles.css */
+/* Ниже приведены стили, специфичные для страницы "Контакты". */
+
+/* Hero-секция для контактов */
+.contacts-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contacts-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contacts-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.contacts-hero img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Секция контактной информации */
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-list a {
+    color: #9e62b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #b084c5;
+}
+
+/* Социальные сети */
+.socials {
+    margin-bottom: 40px;
+}
+
+.socials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9e62b0;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.socials p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links li a {
+    color: #ccc;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.social-links li a:hover {
+    color: #9e62b0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contacts-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info h2,
+    .socials h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .contact-info h2,
+    .socials h2 {
+        font-size: 1.3rem;
+    }
+}
